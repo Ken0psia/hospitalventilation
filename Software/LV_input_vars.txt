@@ -1,0 +1,30 @@
+#constants
+NPi=-1.26727813
+RPi=-0.025138
+r=3206.18
+a=-27405.5
+b=54.1896
+c=-0.045137
+d=2.15321E-5
+e=-4.62027E-9
+f=2.41613
+g=0.00121547
+BPslope=100.0211
+BPintercept=599.9682
+Gc=53.35
+V=1.222E-5
+E=1.043
+RPs=0.006261229
+NPs=0.313000842
+
+#environment_vars
+TempD-Duct Temperature
+RHD-Duct Relative Humidity
+BP-Barometric Pressure
+TempR-Room Temperature
+RHR-Room Relative Humidity
+
+#pressure_transducer
+RPc-Room Velocity Pressure
+NPc-Nozzle Velocity Pressure
+
