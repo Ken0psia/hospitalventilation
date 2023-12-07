@@ -1,0 +1,100 @@
+TD=(TempD*1000-4)*11.25+32; #Temp in F
+TR=(TempR*1000-4)*11.25+32;
+
+RD=(RHD*1000-4)/0.16; #RH in %
+RR=(RHR*1000-4)/0.16;
+
+#saturation pressure psi, idk the source
+PsD=r*exp((a+b*(TD+460)+c*(TD+460)**2+d*(TD+460)**3+e*(TD+460)**4)/(f*(TD+460)-g*(TD+460)**2));
+
+PsR=r*exp((a+b*(TR+460)+c*(TR+460)**2+d*(TR+460)**3+e*(TR+460)**4)/(f*(TR+460)-g*(TR+460)**2));
+
+#barometric pressure psi, mbar to psi
+B=(BPslope*BP+BPintercept)*0.01450377;
+
+#air density lb/ft3, unsure of source
+DD=((B-PsD*(RD/100))/(.37*(460+TD)))+((PsD*(RD/100))/(.596*(460+TD)));
+
+DR=((B-PsR*(RR/100))/(.37*(460+TR)))+((PsR*(RR/100))/(.596*(460+TR)));
+
+#nozzle pressure
+NPcu=NPc*1000;
+NP=NPs*NPcu+NPi;
+if(NP<0) NP=0;
+
+#room pressure
+RPcu=RPc*1000;
+RP=RPs*RPcu+RPi;
+RPA=RP*-1;
+
+#D6=nozzle diameter ft
+D6=D6s/12;
+#pipe diameter in, Dx in ft
+Dxs=6;
+Dx=Dxs/12;
+#beta ratio (nozzle d/pipe d)
+Be=D6/Dx;
+#5.2014 = 144*(inwg to psi)
+#non ideal gas correction factor
+A=1-(5.2014*sNP)/(DD*Gc*(TD+459.67));
+#expansion coefficient, still dont know from where
+Y=1-(0.548+0.71*(Be**4))*(1-A);
+#reynolds number, still unsure how being calculated
+Re=(D6*Qe*DD)/(15*V*Pi*D6**2);
+
+C=0.9986-(7.006/sqrt(Re))+(134.6/Re);
+Qo=(1097.8*C*(Pi*(D6**2)/4)*Y*sqrt(sNP/DD))/sqrt(1-E*(Be**4));
+
+Qe=1000*An;
+An=(Dn**2)*Pi/4;
+
+#D6s = nozzle diameter in
+if(ACH==2) {Dns=1.5; D6s=1; CR=1; QF=1; H=1;};
+if(ACH==4) {Dns=2.5; D6s=1; CR=2; QF=2; H=2;};
+if(ACH==6) {Dns=3; D6s=2; CR=3; QF=2; H=2;}; 
+if(ACH==8) {Dns=4; D6s=2; CR=4; QF=3; H=3;};
+if(ACH==12) {Dns=5; D6s=2; CR=5; QF=3; H=3;};
+
+#Dns = nipple diamer in
+#Dn = nipple D ft
+Dn=Dns/12;
+Vo=Qo/An;
+
+I=Vo/1000;
+I2=sRP/-0.05;
+
+if(I2>1.75)
+BI=ma1-0.00005;
+if(I2<0.25)
+BI=ma1+0.00005;
+if(I2<=1.75)
+if(I2>=1.07)
+BI=ma1-0.00001;
+if(I2>=0.25)
+if(I2<=0.93)
+BI=ma1+0.00001;
+if(0.93<I2)
+if(I2<1.07)
+BI=ma1;
+if(BI>=0.02)
+BI=0.02;
+if(BI<=0.000)
+BI=0.000;
+
+if(I<0.5)
+CV=ma+0.0001;
+if(I>1.5) 
+CV=ma-0.0001;
+if(I<=1.5)
+if(I>=1.07)
+CV=ma-0.00005;
+if(I>=0.5)
+if(I<=0.93)
+CV=ma+0.00005;
+if(0.93<I)
+if(I<1.07)
+CV=ma;
+if(CV>=0.02)
+CV=0.02;
+if(CV<=0.004)
+CV=0.004;
