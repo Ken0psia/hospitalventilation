@@ -1,0 +1,340 @@
+{
+  "main": {
+    "id": "1dcbae703ff68dc3",
+    "type": "split",
+    "children": [
+      {
+        "id": "54982b8f1501890f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "700d49c9acfd3c90",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Voltage to Current converter.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8b41931bfed60137",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MCP3008.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ba9ee37080a5215d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MCP3008.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cb65696d43cc9c64",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ADC Inputs/Series 677 Pressure Transducer.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "db6f30f4fa043d91",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ADC Inputs/Model 278 Pressure Transducer.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4641d8058c62271c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ADC Inputs/HX94A RH & Temp Sensor.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e80a820c3f085c3a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ADC Inputs/HX94C RH & Temp Sensor.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "485d4ab8a66e7d4f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ADC Inputs/HX94A RH & Temp Sensor.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3cb50e9f59f8c80d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DAC Outputs/FM100.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a12c02a539e73aec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DAC Outputs/PBVPV1206.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "26ba72bd03e81bcf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DAC Outputs/RSSDN-10A.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bae794cddbe979f1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MCP4922.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0b01aab480ad19d6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GPIO Pinout.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7dfb0dcceebb1d68",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GPIO Pinout.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 12
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fbbf3d40545a70ab",
+    "type": "split",
+    "children": [
+      {
+        "id": "386e0312ce5be1f6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2b9eeef3caa23bf3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "32a0aa8fe32133a2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4bf5b6e7cb27bbac",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "47befe12c47c3b6f",
+    "type": "split",
+    "children": [
+      {
+        "id": "d30fae137336e1e6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f0e5a5ab77b38119",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "GPIO Pinout.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f1394818d02fa5e5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "GPIO Pinout.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2279c6c2be34bc8d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "6eda31b9e9453906",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "GPIO Pinout.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "0b01aab480ad19d6",
+  "lastOpenFiles": [
+    "MCP4922.md",
+    "MCP3008.md",
+    "DAC Outputs/SSR330.md",
+    "img sources/SSR330 (Fan Relay).pdf",
+    "DAC Outputs/RSSDN-10A.md",
+    "img sources/RSSDN-10A (Fan Relay).pdf",
+    "DAC Outputs/PBVPV1206.md",
+    "img sources/PBVPV1206 Data Sheet (Control Valve)-CV.pdf",
+    "DAC Outputs/FM100.md",
+    "img sources/FM100 Maintenance & Operations Manual.pdf",
+    "ADC Inputs/HX94A RH & Temp Sensor.md",
+    "Untitled",
+    "ADC Inputs/HX94C RH & Temp Sensor.md",
+    "img sources/Pasted image 20231214004248.png",
+    "ADC Inputs/Magnesense Differential Pressure Transducer.md",
+    "img sources",
+    "img sources/Magnesense Differential Pressure Transmitter Data Sheet-Room Pressure.pdf",
+    "img sources/HX94C Data Sheet (RH&Temp Sensor)-Room RH+Temp.pdf",
+    "img sources/HX94A Data Sheet (RH&Temp Sensor)-Duct RH+Temp.pdf",
+    "ADC Inputs/Model 278 Pressure Transducer.md",
+    "img sources/98072-38 Data Sheet (Pres Transducer)-Room VP.pdf",
+    "ADC Inputs/Series 677 Pressure Transducer.md",
+    "img sources/Pasted image 20231215012051.png",
+    "img sources/Pasted image 20231215010846.png",
+    "img sources/Pasted image 20231215010739.png",
+    "img sources/Pasted image 20231215010709.png",
+    "Voltage to Current converter.md",
+    "GPIO Pinout.md",
+    "img sources/Pasted image 20231215010345.png",
+    "img sources/Pasted image 20231215010237.png",
+    "img sources/Pasted image 20231215010223.png"
+  ]
+}

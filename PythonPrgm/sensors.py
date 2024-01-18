@@ -1,29 +1,30 @@
 #Attempt to breakdown the labview program into readable python program
 #Documentation should also be readable
+from datetime import datetime
 
-class HX94A:
-    """This class represents the HX94A Temperature and Relative Humidity (RH) sensor. 
-    It's designed to acquire readings from the sensor and convert these readings into 
-    relevant temperature and humidity values.
-
+class HX94_TEMPRH:
+    """This class is designed to convert readings from the HX94A and HX94C Temperature and 
+    Relative Humidity (RH) sensors into relevant temperature and humidity values.
     The class supports readings in both current and voltage modes, and can provide 
     temperature readings in either Celsius or Fahrenheit. The relative humidity 
     is given as a percentage.
 
     Attributes:
-        output_value (float): The current or voltage output of the sensor depending on the mode
+        output_value (float): The current [A] or voltage [V] output of the sensor depending on the mode
         output_mode (str): The mode of output from the sensor; ('voltage','current')
         temp_units (str): The unit for temperature measurement; ('C','F')
 
     Outputs:
         temp (float): The temperature reading from the sensor, in the specified units ('C' or 'F').
-        RH (float): The relative humidity reading from the sensor, in percentage form; (e.g., 100% is represented as 100).
+        RH (float): The relative humidity reading from the sensor, in percentage form;
+                    (e.g., 100% is represented as 100).
 
     Methods:
-        read_sensor: Reads the sensor data and updates the temperature and RH values according to the specified mode and units.
+        read_sensor: Reads the sensor data; returns and updates temperature and RH values.  
     """
 
     def __init__(self, output_value: float, output_mode = 'CURRENT', temp_units ='F'):
+        #defaults: output_mode = 'CURRENT'; temp_units='F'; based on current experiment setup (Fall 2023)
         #initialize vars
         self._output_mode = str.upper(output_mode) #uppercase
         self._output_value = output_value
@@ -43,6 +44,8 @@ class HX94A:
             raise ValueError('Voltage out of range')
     
     def read_sensor(self):
+        '''Returns: (temp, RH)
+        '''
         #update class values with sensor values
         if self._output_mode == 'CURRENT':
             self._current_mode()
@@ -52,9 +55,8 @@ class HX94A:
         return(self.temp, self.RH)
         
     def _current_mode(self):
-        #current output: 4-20 mA
-        #convert to mA
-        current_mA = self._output_value * 1000
+        #current range: 4-20 mA
+        current_mA = self._output_value * 1000#convert to mA
         #calculate RH as per data sheet
         self.RH = (current_mA - 4) / 0.16
         
@@ -78,6 +80,24 @@ class HX94A:
         elif self._temp_units == 'F':
             self.temp = (voltage * 180) + 32 #divide by 0.005555 given in data sheet but 1/0.005555 == 180
 
+def WRITE_MCP4922(channel, value, GPIO):
 
-sensor = HX94A(.008)
-print(sensor.read_sensor())
+
+    #from MCP49x2 data sheet
+    command = 0b1010 if channel == 1 else 0b0010
+
+    #high byte: shift command to make room for value
+    #shift value over and truncate
+    high = (command << 4) | ((value >> 8) & 0b1111)
+    low = value & 0b11111111
+
+    GPIO.output(GPIO, GPIO.LOW)
+
+    #spi.xfer2([high,low])
+    
+    GPIO.output(GPIO, GPIO.HIGH)
+
+
+now = datetime.now()
+hour, minute, second = str(now).split(' ')[1][0:-5].split(":")
+print(hour, minute, second)
