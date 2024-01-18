@@ -36,10 +36,10 @@ Qe=1000*An;
 An=(Dn**2)*Pi/4;
 
 if(ACH==2) {Dns=1.5; D6s=1; CR=1; QF=1; H=1;};
-if(ACH==4) {Dns=1.5; D6s=1; CR=1; QF=1; H=1;};
-if(ACH==6) {Dns=1.5; D6s=1; CR=1; QF=1; H=1;};
-if(ACH==8) {Dns=1.5; D6s=1; CR=1; QF=1; H=1;};
-if(ACH==12) {Dns=1.5; D6s=1; CR=1; QF=1; H=1;};
+if(ACH==4) {Dns=2.5; D6s=1; CR=2; QF=2; H=2;};
+if(ACH==6) {Dns=3; D6s=2; CR=3; QF=2; H=2;};
+if(ACH==8) {Dns=4; D6s=2; CR=4; QF=3; H=3;};
+if(ACH==12) {Dns=5; D6s=2; CR=5; QF=3; H=3;};
 
 Dn=Dns/12;
 Vo=Qo/An;
