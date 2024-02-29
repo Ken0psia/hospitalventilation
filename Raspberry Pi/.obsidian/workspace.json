@@ -4,90 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "2e0f2ca6a8a871d6",
-        "type": "split",
+        "id": "06326f4415b3c003",
+        "type": "tabs",
         "children": [
           {
-            "id": "54982b8f1501890f",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "4641d8058c62271c",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "DAC Outputs/SSR330.md",
-                    "mode": "source",
-                    "source": false
-                  }
+            "id": "abee09a039a46d9b",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Untitled.canvas",
+                "viewState": {
+                  "x": -7.25,
+                  "y": 295.6488237456184,
+                  "zoom": -0.3333333333333333
                 }
               }
-            ]
-          },
-          {
-            "id": "85f84afde5ba0cd8",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "9b055990280ce581",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "NE5532.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              }
-            ]
+            }
           }
-        ],
-        "direction": "horizontal"
-      },
-      {
-        "id": "f2365cf8071e8609",
-        "type": "split",
-        "children": [
-          {
-            "id": "f4082ac5293241e2",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "8f3c1c35800aab4d",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "MCP3008.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              }
-            ]
-          },
-          {
-            "id": "06326f4415b3c003",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "abee09a039a46d9b",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "MCP4922.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "horizontal"
+        ]
       }
     ],
     "direction": "vertical"
@@ -137,7 +72,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 352.5
+    "width": 352.5,
+    "collapsed": true
   },
   "right": {
     "id": "47befe12c47c3b6f",
@@ -153,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DAC Outputs/SSR330.md",
+                "file": "Untitled.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -170,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DAC Outputs/SSR330.md",
+                "file": "Untitled.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -193,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DAC Outputs/SSR330.md"
+                "file": "Untitled.canvas"
               }
             }
           }
@@ -214,21 +150,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4641d8058c62271c",
+  "active": "2b9eeef3caa23bf3",
   "lastOpenFiles": [
+    "MCP4922.md",
+    "Untitled.canvas",
+    "Untitled.md",
+    "MCP3008.md",
+    "NE5532.md",
+    "DAC Outputs/SSR330.md",
     "DAC Outputs/RSSDN-10A.md",
     "ADC Inputs/Magnesense Differential Pressure Transducer.md",
     "ADC Inputs/Model 278 Pressure Transducer.md",
     "GPIO Pinout.md",
-    "DAC Outputs/SSR330.md",
     "DAC Outputs/PBVPV1206.md",
     "DAC Outputs/FM100.md",
     "ADC Inputs/Series 677 Pressure Transducer.md",
     "ADC Inputs/HX94C RH & Temp Sensor.md",
     "ADC Inputs/HX94A RH & Temp Sensor.md",
-    "NE5532.md",
-    "MCP3008.md",
-    "MCP4922.md",
     "img sources/Pasted image 20240118173515.png",
     "img sources/Pasted image 20240118173503.png",
     "img sources/HX94A Data Sheet (RH&Temp Sensor)-Duct RH+Temp.pdf",
