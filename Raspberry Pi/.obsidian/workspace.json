@@ -157,7 +157,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GPIO Pinout.md",
+                "file": "Voltage to Current converter.md",
                 "mode": "source",
                 "source": false
               }
@@ -242,7 +242,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GPIO Pinout.md",
+                "file": "Voltage to Current converter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -259,7 +259,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GPIO Pinout.md",
+                "file": "Voltage to Current converter.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -282,7 +282,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GPIO Pinout.md"
+                "file": "Voltage to Current converter.md"
               }
             }
           }
@@ -305,6 +305,7 @@
   },
   "active": "0b01aab480ad19d6",
   "lastOpenFiles": [
+    "GPIO Pinout.md",
     "MCP4922.md",
     "MCP3008.md",
     "DAC Outputs/SSR330.md",
@@ -332,7 +333,6 @@
     "img sources/Pasted image 20231215010739.png",
     "img sources/Pasted image 20231215010709.png",
     "Voltage to Current converter.md",
-    "GPIO Pinout.md",
     "img sources/Pasted image 20231215010345.png",
     "img sources/Pasted image 20231215010237.png",
     "img sources/Pasted image 20231215010223.png"
