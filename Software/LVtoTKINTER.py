@@ -4,130 +4,133 @@ import numpy as np
 
 
 class App(ctk.CTk):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+    """
+    Main Window For LVtoPython Project
 
+    ...
+    Attributes
+    ----------
+
+    Methods
+    -------
+    _toggle_looping(sec=1):
+        Toggle looping bahavior within app.
+    """
+    def __init__(self, **kwargs):
+        """
+        Construct 
+        """
+        super().__init__(**kwargs)
+        #constants
         self.constants = {'BPslope':100.0211,'NPs':0.313000842,'RPs':0.006261229,
                           'BPintercept':599.9683,'NPi':-1.26727813,'RPi':-0.025138,
                           'E':1.043,'V':0.00001222,'Gc':53.35,
                           'r':3206.18,'a':-27405.5,'b':54.1896,'c':-0.0451347,'d':0.0000215321,'e':-0.00000000462927,'f':2.41613,'g':0.00121547,
                           }
+        #init input/output objects
         self.inputs = Inputs()
         self.outputs = Output(self.constants, self.inputs.get())
-        
-        
+        #looping signal
+        self.looping = False
+        #call to create frames
         self._create_frames()
 
-        self.looping = False
-
         
-
-
-
     def _create_frames(self):
+        #init each desired frame 
         self.constants_frame = ctk.CTkScrollableFrame(self, scrollbar_button_color='#2b2b2b')
         self.inputs_frame = ctk.CTkFrame(self)
         self.outputs_frame = ctk.CTkScrollableFrame(self, scrollbar_button_color='#2b2b2b')
-
+        #button to signal looping
         self.loop_toggle_btn = ctk.CTkButton(self, text='Loop Toggle', command=lambda: self._toggle_looping(1), height=24, fg_color='#1f538d')
-
-
+        #pack frames and btn into parent window aesthetically
         self.inputs_frame.grid(row=0, column=0,
                                padx=6, pady=6,
                                sticky='nsew')
-
         self.constants_frame.grid(row=1, column=0,
                                   padx=6, pady=6,
                                   sticky='nsew')
-        
         self.outputs_frame.grid(row=0, column=1,
                                 rowspan=4,
                                 padx=6, pady=6,
                                 sticky='nsew')
-        
         self.loop_toggle_btn.grid(row=2, column=0,
                                   padx=6, pady=6,
                                   sticky='nsew')
-        
+        #adjust frame weights within window
         self.grid_rowconfigure(3, weight=1)
-        
         self.grid_columnconfigure(1, weight=1)
-
+        #configure components within each frame
         self._config_inputs_frame()
         self._config_constants_frame()
         self._config_outputs_frame()
 
 
     def _config_inputs_frame(self):
+        #set which frame for ease
         frame = self.inputs_frame
+        #frame title [inputs]
         ctk.CTkLabel(frame, text='Inputs', font=('Roboto',20), text_color='#555').grid(row=0, column=0)
-
-        
-
+        #empty dict for storing vars for later use
         self.input_label_vars = {}
         self.input_slider_vars = {}
-
+        #for each input variable range
         for num, item in enumerate(self.inputs.ranges):
             var = item
             range = self.inputs.ranges[item]
-            
-
+            #init tk vars with minimum values
             label_var = tk.StringVar(value=f'{var}: {range["min"]}')
             slider_var = tk.DoubleVar(value=range['min'])
-
+            #store vars into dict
             self.input_slider_vars[var] = slider_var
             self.input_label_vars[var] = label_var
-
+            #create widgets with vars
             label = ctk.CTkLabel(frame, textvariable=label_var)
             slider = ctk.CTkSlider(frame, variable=slider_var, from_=range['min'], to=range['max'], command=self._update_inputs(var))
-
+            #pack widgets into frame
             label.grid(row=2*num+1, column=0)
             slider.grid(row=2*num+2, column=0,
                         padx=6, pady=6,
                         sticky='new')
+            #adjust row/column weight
             frame.grid_rowconfigure(2*num+2, weight=1)
-
         frame.grid_columnconfigure(0, weight=1) 
 
 
     def _update_inputs(self, var):
-        
+        #generate callback function to update corresponding label
         def update(value):
+            #grab label var from dict and update label
             label_var = self.input_label_vars[var]
             label_var.set(f'{var}: {float(value):.3f}')
+            #update inputs obj with new input val
             self.inputs.set(var, value)
-            
         return update
 
 
     def _config_constants_frame(self):
+        #assign relevant frame for ease and create title
         frame = self.constants_frame
         ctk.CTkLabel(frame, text='Constants', font=('Roboto',20), text_color='#555').grid(row=0, column=0, columnspan=2)
-
-        
+        #fill frame with constant labels
         for num, item in enumerate(self.constants):
             const = item
             val = self.constants[item]
             left = ctk.CTkLabel(frame, text=f'{const}', height=14)
             right = ctk.CTkLabel(frame, text=f'{val}', height=14)
-
             left.grid(row=num+1, column=0, sticky='w')
             right.grid(row=num+1, column=1, sticky='e')
-        
         frame.grid_columnconfigure(0, weight=1)
 
     
     def _config_outputs_frame(self):
         frame = self.outputs_frame
         ctk.CTkLabel(frame, text='Outputs', font=('Roboto',20), text_color='#555').grid(row=0, column=0)
-
         self.output_label_vars = {}
-            
-        
         frame.grid_columnconfigure(0, weight=1)
 
 
-    def _toggle_looping(self, sec):
+    def _toggle_looping(self, sec=1):
         self.looping = not self.looping
         if self.looping:
             self._loop(sec)
@@ -139,19 +142,20 @@ class App(ctk.CTk):
     
 
     def _loop(self, sec):
-
         if self.looping:
             #
             #insert looping behavior here
             #
             self.outputs.update(self.inputs.get())
             print(self.outputs.get())
-            
             #print('test')
             self.after(1000*sec, lambda: self._loop(sec))
 
 class Output:
     def __init__(self, constants, inputs):
+        """
+        
+        """
         self.constants = constants
         for name, val in constants.items():
             setattr(self, name, val)
@@ -201,16 +205,6 @@ class Output:
             return self.var_list[name]
 
     
-        
-            
-
-
-
-    
-        
-        
-
-
 class Inputs:
     def __init__(self):
         self.ranges = {'TempD':{'min':0.004,'max':0.02},'TempR':{'min':0.004,'max':0.02},
