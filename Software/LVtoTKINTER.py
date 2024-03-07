@@ -4,22 +4,7 @@ import numpy as np
 
 
 class App(ctk.CTk):
-    """
-    Main Window For LVtoPython Project
-
-    ...
-    Attributes
-    ----------
-
-    Methods
-    -------
-    _toggle_looping(sec=1):
-        Toggle looping bahavior within app.
-    """
     def __init__(self, **kwargs):
-        """
-        Construct 
-        """
         super().__init__(**kwargs)
         #constants
         self.constants = {'BPslope':100.0211,'NPs':0.313000842,'RPs':0.006261229,
@@ -127,6 +112,7 @@ class App(ctk.CTk):
         frame = self.outputs_frame
         ctk.CTkLabel(frame, text='Outputs', font=('Roboto',20), text_color='#555').grid(row=0, column=0)
         self.output_label_vars = {}
+
         frame.grid_columnconfigure(0, weight=1)
 
 
@@ -147,6 +133,7 @@ class App(ctk.CTk):
             #insert looping behavior here
             #
             self.outputs.update(self.inputs.get())
+
             print(self.outputs.get())
             #print('test')
             self.after(1000*sec, lambda: self._loop(sec))
@@ -159,7 +146,6 @@ class Output:
         self.constants = constants
         for name, val in constants.items():
             setattr(self, name, val)
-        self.outputs = {}
         
         self.update(inputs)
 
