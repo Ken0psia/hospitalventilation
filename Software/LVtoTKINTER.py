@@ -4,22 +4,7 @@ import numpy as np
 
 
 class App(ctk.CTk):
-    """
-    Main Window For LVtoPython Project
-
-    ...
-    Attributes
-    ----------
-
-    Methods
-    -------
-    _toggle_looping(sec=1):
-        Toggle looping bahavior within app.
-    """
     def __init__(self, **kwargs):
-        """
-        Construct 
-        """
         super().__init__(**kwargs)
         #constants
         self.constants = {'BPslope':100.0211,'NPs':0.313000842,'RPs':0.006261229,
@@ -86,7 +71,7 @@ class App(ctk.CTk):
             self.input_label_vars[var] = label_var
             #create widgets with vars
             label = ctk.CTkLabel(frame, textvariable=label_var)
-            slider = ctk.CTkSlider(frame, variable=slider_var, from_=range['min'], to=range['max'], command=self._update_inputs(var))
+            slider = ctk.CTkSlider(frame, variable=slider_var, from_=range['min'], to=range['max'], command=self._update_from_input(var))
             #pack widgets into frame
             label.grid(row=2*num+1, column=0)
             slider.grid(row=2*num+2, column=0,
@@ -97,7 +82,7 @@ class App(ctk.CTk):
         frame.grid_columnconfigure(0, weight=1) 
 
 
-    def _update_inputs(self, var):
+    def _update_from_input(self, var):
         #generate callback function to update corresponding label
         def update(value):
             #grab label var from dict and update label
@@ -127,7 +112,21 @@ class App(ctk.CTk):
         frame = self.outputs_frame
         ctk.CTkLabel(frame, text='Outputs', font=('Roboto',20), text_color='#555').grid(row=0, column=0)
         self.output_label_vars = {}
+        #
+        outputs = self.outputs.get()
+        for num, item in enumerate(outputs):
+            #for clarity
+            name = item
+            val = outputs[item]
+            
+
+            label_var = tk.StringVar(value=f'{name}: {val:.5f}')
+
+        
+
+        #
         frame.grid_columnconfigure(0, weight=1)
+
 
 
     def _toggle_looping(self, sec=1):
@@ -166,8 +165,8 @@ class Output:
     def update(self, inputs):
         #print(inputs)
         #Temp in F
-        TD = (inputs['TempD']*1000 + 32)*11.25 + 32
-        TR = (inputs['TempR']*1000 + 32)*11.25 + 32
+        TD = (inputs['TempD']*1000 -4)*11.25 + 32
+        TR = (inputs['TempR']*1000 -4)*11.25 + 32
 
         #RH in %
         RD = (inputs['RHD']*1000-4)/0.16
@@ -177,7 +176,7 @@ class Output:
         PsD = self.r * np.exp((self.a + self.b*(TD + 460) + self.c*(TD + 460)**2 + self.d*(TD + 460)**3 + self.e*(TD + 460)**4)/(self.f*(TD + 460) - self.g*(TD + 460)**2))
         PsR = self.r * np.exp((self.a + self.b*(TR + 460) + self.c*(TR + 460)**2 + self.d*(TR + 460)**3 + self.e*(TR + 460)**4)/(self.f*(TR + 460) - self.g*(TR + 460)**2))
 
-        # #barometric pressure psi, mbar to psi conversion
+        # #barometric pressure psi,                        mbar to psi conversion
         B = (self.BPslope*inputs['BP'] + self.BPintercept)*0.01450377
 
         # #air density lb/ft3, unsure of source
