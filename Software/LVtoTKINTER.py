@@ -112,6 +112,7 @@ class App(ctk.CTk):
         frame = self.outputs_frame
         ctk.CTkLabel(frame, text='Outputs', font=('Roboto',20), text_color='#555').grid(row=0, column=0)
         self.output_label_vars = {}
+<<<<<<< HEAD
         #
         outputs = self.outputs.get()
         for num, item in enumerate(outputs):
@@ -125,6 +126,9 @@ class App(ctk.CTk):
         
 
         #
+=======
+
+>>>>>>> a4872ec32432a6f84b532354a796567005578a09
         frame.grid_columnconfigure(0, weight=1)
 
 
@@ -146,6 +150,7 @@ class App(ctk.CTk):
             #insert looping behavior here
             #
             self.outputs.update(self.inputs.get())
+
             print(self.outputs.get())
             #print('test')
             self.after(1000*sec, lambda: self._loop(sec))
@@ -158,7 +163,6 @@ class Output:
         self.constants = constants
         for name, val in constants.items():
             setattr(self, name, val)
-        self.outputs = {}
         
         self.update(inputs)
 
