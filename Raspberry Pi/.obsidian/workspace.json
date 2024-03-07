@@ -1,49 +1,14 @@
 {
   "main": {
-    "id": "1dcbae703ff68dc3",
+    "id": "2d82cfee856646b9",
     "type": "split",
     "children": [
       {
-        "id": "06326f4415b3c003",
+        "id": "9453e6a28165a475",
         "type": "tabs",
         "children": [
           {
-            "id": "abee09a039a46d9b",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Untitled.canvas",
-                "viewState": {
-                  "x": -7.25,
-                  "y": 295.6488237456184,
-                  "zoom": -0.3333333333333333
-                }
-              }
-<<<<<<< HEAD
-            ]
-          },
-          {
-            "id": "85f84afde5ba0cd8",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "9b055990280ce581",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "NE5532.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              }
-<<<<<<< HEAD
-            }
-          },
-          {
-            "id": "ba9ee37080a5215d",
+            "id": "cb3fa31c5b8a302f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -53,144 +18,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "cb65696d43cc9c64",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ADC Inputs/Series 677 Pressure Transducer.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "db6f30f4fa043d91",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ADC Inputs/Model 278 Pressure Transducer.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4641d8058c62271c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ADC Inputs/HX94A RH & Temp Sensor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e80a820c3f085c3a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ADC Inputs/HX94C RH & Temp Sensor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "485d4ab8a66e7d4f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ADC Inputs/HX94A RH & Temp Sensor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3cb50e9f59f8c80d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DAC Outputs/FM100.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a12c02a539e73aec",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DAC Outputs/PBVPV1206.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "26ba72bd03e81bcf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DAC Outputs/RSSDN-10A.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bae794cddbe979f1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MCP4922.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0b01aab480ad19d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Voltage to Current converter.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7dfb0dcceebb1d68",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "GPIO Pinout.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-=======
-            ]
->>>>>>> 609a13b5730fdc0e607f321e046783349d6943de
-=======
-            }
->>>>>>> 81a1d75011803e87a5a91ed100c662d55a0aff7d
           }
         ]
       }
@@ -198,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "fbbf3d40545a70ab",
+    "id": "ed520239b5807478",
     "type": "split",
     "children": [
       {
-        "id": "386e0312ce5be1f6",
+        "id": "3e36510b687dc5c2",
         "type": "tabs",
         "children": [
           {
-            "id": "2b9eeef3caa23bf3",
+            "id": "31bb460b0f8f1406",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -216,7 +43,7 @@
             }
           },
           {
-            "id": "32a0aa8fe32133a2",
+            "id": "e562f50603737656",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -231,7 +58,7 @@
             }
           },
           {
-            "id": "4bf5b6e7cb27bbac",
+            "id": "c12b7f5bae6acbc8",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -242,32 +69,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 352.5,
-    "collapsed": true
+    "width": 300
   },
   "right": {
-    "id": "47befe12c47c3b6f",
+    "id": "ad3fcd26e4a47fbf",
     "type": "split",
     "children": [
       {
-        "id": "d30fae137336e1e6",
+        "id": "790c2a6e6fbe9dc5",
         "type": "tabs",
         "children": [
           {
-            "id": "f0e5a5ab77b38119",
+            "id": "26c4bb9af1d05a7a",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                "file": "Voltage to Current converter.md",
-=======
-                "file": "DAC Outputs/SSR330.md",
->>>>>>> 609a13b5730fdc0e607f321e046783349d6943de
-=======
-                "file": "Untitled.canvas",
->>>>>>> 81a1d75011803e87a5a91ed100c662d55a0aff7d
+                "file": "MCP3008.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -279,27 +97,19 @@
             }
           },
           {
-            "id": "f1394818d02fa5e5",
+            "id": "37bb3949af97dc82",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                "file": "Voltage to Current converter.md",
-=======
-                "file": "DAC Outputs/SSR330.md",
->>>>>>> 609a13b5730fdc0e607f321e046783349d6943de
-=======
-                "file": "Untitled.canvas",
->>>>>>> 81a1d75011803e87a5a91ed100c662d55a0aff7d
+                "file": "MCP3008.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "2279c6c2be34bc8d",
+            "id": "2838772ff6d39bb9",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -310,20 +120,12 @@
             }
           },
           {
-            "id": "6eda31b9e9453906",
+            "id": "26d7dbdb618fd251",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                "file": "Voltage to Current converter.md"
-=======
-                "file": "DAC Outputs/SSR330.md"
->>>>>>> 609a13b5730fdc0e607f321e046783349d6943de
-=======
-                "file": "Untitled.canvas"
->>>>>>> 81a1d75011803e87a5a91ed100c662d55a0aff7d
+                "file": "MCP3008.md"
               }
             }
           }
@@ -344,58 +146,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2b9eeef3caa23bf3",
-  "lastOpenFiles": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "GPIO Pinout.md",
-    "MCP4922.md",
-    "MCP3008.md",
-    "DAC Outputs/SSR330.md",
-    "img sources/SSR330 (Fan Relay).pdf",
-=======
->>>>>>> 609a13b5730fdc0e607f321e046783349d6943de
-=======
-    "MCP4922.md",
-    "Untitled.canvas",
-    "Untitled.md",
-    "MCP3008.md",
-    "NE5532.md",
-    "DAC Outputs/SSR330.md",
->>>>>>> 81a1d75011803e87a5a91ed100c662d55a0aff7d
-    "DAC Outputs/RSSDN-10A.md",
-    "ADC Inputs/Magnesense Differential Pressure Transducer.md",
-    "ADC Inputs/Model 278 Pressure Transducer.md",
-    "GPIO Pinout.md",
-    "DAC Outputs/PBVPV1206.md",
-    "DAC Outputs/FM100.md",
-    "ADC Inputs/Series 677 Pressure Transducer.md",
-    "ADC Inputs/HX94C RH & Temp Sensor.md",
-    "ADC Inputs/HX94A RH & Temp Sensor.md",
-    "img sources/Pasted image 20240118173515.png",
-    "img sources/Pasted image 20240118173503.png",
-    "img sources/HX94A Data Sheet (RH&Temp Sensor)-Duct RH+Temp.pdf",
-    "Voltage to Current converter.md",
-    "img sources/Pasted image 20231215010846.png",
-    "img sources/Pasted image 20231215010739.png",
-    "img sources/Pasted image 20231215010709.png",
-<<<<<<< HEAD
-    "Voltage to Current converter.md",
-=======
-    "img sources/SSR330 (Fan Relay).pdf",
-    "img sources/RSSDN-10A (Fan Relay).pdf",
-    "img sources/PBVPV1206 Data Sheet (Control Valve)-CV.pdf",
-    "img sources/FM100 Maintenance & Operations Manual.pdf",
-    "Untitled",
-    "img sources/Pasted image 20231214004248.png",
-    "img sources",
-    "img sources/Magnesense Differential Pressure Transmitter Data Sheet-Room Pressure.pdf",
-    "img sources/HX94C Data Sheet (RH&Temp Sensor)-Room RH+Temp.pdf",
-    "img sources/98072-38 Data Sheet (Pres Transducer)-Room VP.pdf",
-    "img sources/Pasted image 20231215012051.png",
->>>>>>> 609a13b5730fdc0e607f321e046783349d6943de
-    "img sources/Pasted image 20231215010345.png",
-    "img sources/Pasted image 20231215010237.png",
-    "img sources/Pasted image 20231215010223.png"
-  ]
+  "active": "cb3fa31c5b8a302f",
+  "lastOpenFiles": []
 }
